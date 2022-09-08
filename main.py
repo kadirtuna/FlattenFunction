@@ -1,16 +1,17 @@
-from collections.abc import Iterable
+import flattenFunction
+import ListReverserFunction
 
-def flatten(list):
-    for x in list:
-        if isinstance(x, Iterable) and not isinstance(x, (str, bytes)):
-            yield from flatten(x)
-        else:
-            yield x
-
-
-#An example ragged nested list to be converted to a flatten list.
-
-"""
+#Two sample ragged nested lists to be flatted and reversed!
 list1 = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
-print(list(flatten(list1)))
-"""
+list2 = [[1, 2], [3, 4], [[5, [6, 10, 16]], 7]]
+
+print("Original list1 : ", list1)
+print("Flatten version of list1 : ", list(flattenFunction.flatten(list1)))
+list(ListReverserFunction.listReverserFunc(list1))
+print("Reversed version of list1 : ", list1)
+
+print("----------------------------------------------")
+print("Original list2 : ", list2)
+print("Flatten version of list2 : ", list(flattenFunction.flatten(list2)))
+list(ListReverserFunction.listReverserFunc(list2))
+print("Reversed version of list2 : ", list2)
