@@ -8,3 +8,4 @@ def listReverserFunc(list):
             yield from listReverserFunc(x)
         else:
             yield x
+
