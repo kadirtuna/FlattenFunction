@@ -1,4 +1,4 @@
-import flattenFunction
+import FlattenFunction
 import ListReverserFunction
 
 #Two sample ragged nested lists to be flatted and reversed!
