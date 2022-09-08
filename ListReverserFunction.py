@@ -1,8 +1,5 @@
 from collections.abc import Iterable
 
-import flattenFunction
-
-
 def listReverserFunc(list):
     list.reverse()
 
